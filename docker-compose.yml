@@ -44,7 +44,7 @@ services:
       # - ./entrypoints:/entrypoints:ro
       # - ./scripts:/scripts:ro
     devices:
-      - /dev/bus/usb:/dev/bus/usb:rw
+      - /dev/bus/usb:/dev/bus/usb
     command: /entrypoints/api_entrypoint.sh
 
   nginx:
