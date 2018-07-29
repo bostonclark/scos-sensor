@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 uhd = None
 radio = None
 is_available = False
-
+driver_is_available = True
 
 def connect():  # -> bool:
     global uhd

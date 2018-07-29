@@ -151,6 +151,14 @@ mock_acquire = actions.acquire_single_freq_fft.SingleFrequencyFftAcquisition(
     nffts=11
 )
 mock_acquire.usrp = actions.tests.mocks.usrp
-
 actions.by_name['mock_acquire'] = mock_acquire
+
+mock_time_acquire = actions.time_sample_acquire.SingleTimeAcquisition(
+    frequency=1e9,
+    sample_rate=1e6,
+    num_samples=1024
+    )
+mock_time_acquire.usrp = actions.tests.mocks.usrp
+actions.by_name['mock_time_acquire'] = mock_time_acquire
+
 actions.init()

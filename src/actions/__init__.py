@@ -1,4 +1,5 @@
 from . import acquire_single_freq_fft
+from . import time_sample_acquire
 from . import logger
 from . import monitor_usrp
 
@@ -10,6 +11,11 @@ registered_actions = {
         sample_rate=15.36e6,
         fft_size=1024,
         nffts=300
+    ),
+    "acquire1024samples" : time_sample_acquire.SingleTimeAcquisition(
+        frequency=2.4e9,
+        sample_rate=1e6,
+        num_samples=1024
     ),
     "logger": logger.Logger(),
     "admin_logger": logger.Logger(loglvl=logger.LOGLVL_ERROR, admin_only=True),
